@@ -21,7 +21,7 @@ export const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
               <button className="relative overflow-hidden px-4 py-2 rounded-full bg-primary text-primary-foreground">
-                View Price
+                View Prices
               </button>
               <button className="relative overflow-hidden px-4 py-2 border border-primary rounded-full">
                 Booking
