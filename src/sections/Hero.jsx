@@ -24,7 +24,7 @@ export const Hero = () => {
                 View Prices
               </button>
               <button className="relative overflow-hidden px-4 py-2 border border-primary rounded-full">
-                Booking
+                Order
               </button>
             </div>
 
