@@ -8,10 +8,7 @@ export const Hero = () => {
         <div className="flex flex-col md:flex-row gap-5 sm:gap-6 md:items-stretch">
           <div className="flex flex-col gap-5 sm:gap-6 md:w-[47%] md:shrink-0 ">
             <div>
-              <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-foreground block mb-2">
-                Backstep Shoe Care
-              </span>
-              <h1 className="text-3xl sm:text-4xl md:text-[2.6rem] lg:text-4xl font-extrabold leading-tight text-foreground mb-3 sm:mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-[2.6rem] lg:text-4xl font-extrabold leading-tight text-foreground">
                 LET US REVIVE YOUR SHOES!
               </h1>
               <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
@@ -19,6 +16,16 @@ export const Hero = () => {
                 mengembalikan tampilan sepatu kesayanganmu agar awet, bersih,
                 dan nyaman dipakai.
               </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4">
+              <button className="relative overflow-hidden px-4 py-2 rounded-full bg-primary text-primary-foreground">
+                View Price
+              </button>
+              <button className="relative overflow-hidden px-4 py-2 border border-primary rounded-full">
+                Booking
+              </button>
             </div>
 
             <div className="group overflow-hidden rounded-2xl sm:rounded-3xl border-[5px] sm:border-[7px] border-primary">
