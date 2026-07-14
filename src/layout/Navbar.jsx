@@ -10,9 +10,25 @@ const navLinks = [
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.addEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="fixed top-0 left-0 right-0 transition-all duration-100 py-5 z-50">
+    <header
+      className={`fixed top-0 left-0 right-0 transition-all duration-100 ${isScrolled ? "bg-primary-foreground py-3" : "bg-transparent py-5"} py-5 z-50`}
+    >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <img
           src="/backstep-logo-transparan.png"
@@ -23,12 +39,12 @@ export const Navbar = () => {
 
         {/* Dekstop Nav */}
         <div className="hidden md:flex items-center gap-1">
-          <div className="border rounded-full px-2 py-1 flex items-center gap-4">
+          <div className="px-2 py-1 flex items-center gap-4">
             {navLinks.map((link, index) => (
               <a
                 href={link.hred}
                 key={index}
-                className=" px-4 py-2 text-sm text-foreground hover:text-primary-foreground rounded-full hover:bg-surface"
+                className="px-4 py-2 text-sm text-foreground hover:underline rounded-full"
               >
                 {link.label}
               </a>
